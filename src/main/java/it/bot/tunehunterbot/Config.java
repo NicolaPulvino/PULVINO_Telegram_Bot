@@ -10,9 +10,9 @@ public class Config {
     static {
         try (InputStream input = new FileInputStream("src/main/resources/config.properties")) {
             prop.load(input);
-            System.out.println("✅ Configurazione caricata.");
+            System.out.println("Configurazione caricata.");
         } catch (Exception e) {
-            System.err.println("❌ Errore nel caricamento di config.properties:");
+            System.err.println("Errore nel caricamento di config.properties:");
             e.printStackTrace();
         }
     }

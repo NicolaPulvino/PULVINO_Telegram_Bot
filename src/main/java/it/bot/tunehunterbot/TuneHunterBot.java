@@ -187,7 +187,7 @@ public class TuneHunterBot extends TelegramLongPollingBot {
 
         } catch (Exception e) {
             e.printStackTrace();
-            return "❌ Errore nel recupero delle statistiche.";
+            return "Errore nel recupero delle statistiche.";
         }
     }
 }

@@ -34,10 +34,10 @@ public class DatabaseManager {
                     )
                 """);
 
-                System.out.println("✅ Database inizializzato correttamente.");
+                System.out.println("Database inizializzato correttamente.");
             }
         } catch (Exception e) {
-            System.err.println("❌ Errore nell'inizializzazione del database:");
+            System.err.println("Errore nell'inizializzazione del database:");
             e.printStackTrace();
         }
     }
