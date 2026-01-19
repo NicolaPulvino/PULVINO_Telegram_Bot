@@ -3,9 +3,12 @@ package it.bot.tunehunterbot;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class DatabaseManager {
     private static final String DB_URL = "jdbc:sqlite:tunehunterbot.db";
+    private static final Logger LOGGER = Logger.getLogger(DatabaseManager.class.getName());
 
     public static void initialize() {
         try (Connection conn = DriverManager.getConnection(DB_URL)) {
@@ -34,11 +37,10 @@ public class DatabaseManager {
                     )
                 """);
 
-                System.out.println("Database inizializzato correttamente.");
+                LOGGER.info("Database inizializzato correttamente.");
             }
         } catch (Exception e) {
-            System.err.println("Errore nell'inizializzazione del database:");
-            e.printStackTrace();
+            LOGGER.log(Level.SEVERE, "Errore nell'inizializzazione del database:", e);
         }
     }
 
